@@ -1,4 +1,3 @@
-// src/components/AboutPage.js
 
 import React from "react";
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react'; // hamburger and close icons
+import { Menu, X } from 'lucide-react';
 
 const nav_sections = [
   { id: 'home', label: 'Home' },
@@ -13,7 +13,6 @@ const nav_sections = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Disable scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : 'auto';
   }, [isOpen]);
@@ -23,7 +22,6 @@ const Navbar = () => {
       <div className="flex justify-between items-center px-6 md:px-16 py-6">
         <div className="text-2xl font-bold text-white">Astral Paints</div>
 
-        {/* Desktop nav */}
         <div className="hidden md:flex space-x-10">
           {nav_sections.map((section) => (
             <a
@@ -36,7 +34,6 @@ const Navbar = () => {
           ))}
         </div>
           
-        {/* Hamburger icon for mobile */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-white"
@@ -46,7 +43,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden bg-[#0060af] px-6 pb-4 space-y-4 animate-slide-down">
           {nav_sections.map((section) => (

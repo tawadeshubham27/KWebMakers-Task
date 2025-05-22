@@ -12,8 +12,8 @@ const BlogSection = ({ blogTitle, blogSubtitle, blogs }) => {
         {blogs.map((blog, idx) => (
           <div key={idx} className="bg-white rounded shadow hover:shadow-lg transition overflow-hidden">
             <img
-              src={blog.featuredImage?.node?.sourceUrl}
-              alt={blog.title}
+              src={blog?.featuredImage?.node?.sourceUrl}
+              alt={blog?.title}
               className="w-full h-48 object-cover"
             />
             <div className="p-4">

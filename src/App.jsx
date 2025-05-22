@@ -1,4 +1,3 @@
-import { ApolloProvider } from '@apollo/client'
 import './App.css'
 import BannerSection from './components/BannerSection'
 import AboutSection from './components/AboutSection'
@@ -14,6 +13,7 @@ import NavBar from './components/NavBar'
 import ContactSection from './components/ContactSection'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import ColoursApi from './components/ColoursApi'
 
 function App() {
   const [data, setData] = useState(null);
@@ -79,6 +79,8 @@ function App() {
         </div>
         <Footer />
       </div>
+
+      {/* <ColoursApi /> */}
     </>
   )
 }
